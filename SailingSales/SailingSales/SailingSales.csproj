@@ -175,6 +175,7 @@
     <Content Include="Content\images\boats\precision15.jpg" />
     <Content Include="Content\images\boats\seaward25.jpg" />
     <Content Include="Content\images\boats\wauquiezsloop.jpg" />
+    <Content Include="Content\reset.css" />
     <Content Include="Content\Site.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="packages.config" />
