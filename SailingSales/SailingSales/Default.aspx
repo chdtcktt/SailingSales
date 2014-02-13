@@ -32,22 +32,28 @@
         <div class="modal-body">
             <table>
                 <tr>
-                    <td><label>First Name</label></td>
+                    <td><label>First Name:</label></td>
                 </tr>
                 <tr>
                     <td><asp:TextBox ID="TextBoxFirstName" runat="server"></asp:TextBox></td>
                 </tr>
                 <tr>
-                    <td><label>Last Name</label></td>
+                    <td><label>Last Name:</label></td>
                 </tr>
                 <tr>
                     <td><asp:TextBox ID="TextBoxLastName" runat="server"></asp:TextBox></td>
                 </tr>
                 <tr>
-                    <td><label>Message</label></td>
+                    <td><label>Email:</label></td>
                 </tr>
                 <tr>
-                    <td><asp:TextBox TextMode="MultiLine" Columns="60" Rows="6"  runat="server"></asp:TextBox></td>
+                    <td><asp:TextBox ID="TextBoxEmail" runat="server"></asp:TextBox></td>
+                </tr>
+                <tr>
+                    <td><label>Message to Sales:</label></td>
+                </tr>
+                <tr>
+                    <td><asp:TextBox ID="TextBoxMessage" TextMode="MultiLine" Columns="60" Rows="6"  runat="server"></asp:TextBox></td>
                 </tr>   
             </table>
 

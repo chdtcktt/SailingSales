@@ -25,21 +25,18 @@ namespace SailingSales
 
             using (SailingSalesdbDataContext db = new SailingSalesdbDataContext())
             {
-                var item = db.Boats.Where(x => x.ID == boatRecord);
+                var q = db.Boats.Where(x => x.ID == boatRecord);
 
-
+                foreach (var x in q)
+                {
+                    string message = string.Format("Hey Sailing Sales! I would love you to contact me about the {0} {1} \n ITEM NUMBER: {2}", x.Year, x.Description, x.ID);
+                    TextBoxMessage.Text = message;
+                }
 
                 Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "$('#myModal').modal('show')", true);
 
 
             }
-            
-            
-
-
-           
-
-
         }
 
        

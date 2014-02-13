@@ -1,7 +1,7 @@
 ﻿/* Move down content because we have a fixed navbar that is 50px tall */
 body {
-    padding-top: 50px;
     padding-bottom: 20px;
+    
 }
 
 /* Wrapping element */
@@ -16,6 +16,54 @@ input[type="text"],
 input[type="password"] {
     max-width: 280px;
 }
+
+
+header {
+    width: 100%;
+    padding: 60px 0 30px;
+    background-color: darkblue;
+    overflow: auto;
+}
+
+    header nav {
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    header h1, p {
+        color: white;
+    }
+
+    header h1{
+        font-size:4em;
+    }
+    header p{
+        font-size: 2em;
+    }
+
+    header img{
+        float:right;
+        position:relative;
+    }
+
+/*header {
+    background-color: black;
+    padding-top: 50px;
+
+
+}
+
+    header img {
+        margin-left: 50%;
+        margin-bottom: 50px;
+    }
+
+    header h1 , h2{
+        color:white;
+    }
+
+    #greeting{
+    }*/
 
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
