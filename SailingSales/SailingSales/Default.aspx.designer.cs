@@ -13,13 +13,13 @@ namespace SailingSales {
     public partial class _Default {
         
         /// <summary>
-        /// GridView1 control.
+        /// GridViewBoats control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView1;
+        protected global::System.Web.UI.WebControls.GridView GridViewBoats;
         
         /// <summary>
         /// SqlDataSourceSailingSales control.
@@ -29,5 +29,23 @@ namespace SailingSales {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSourceSailingSales;
+        
+        /// <summary>
+        /// TextBoxFirstName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TextBoxFirstName;
+        
+        /// <summary>
+        /// TextBoxLastName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TextBoxLastName;
     }
 }
