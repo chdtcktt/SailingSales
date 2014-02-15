@@ -2,27 +2,28 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
-
-    <asp:GridView ID="GridViewBoats" CssClass="table" runat="server" DataSourceID="SqlDataSourceSailingSales" AutoGenerateColumns="False" OnRowCommand="GridViewBoats_RowCommand">
+    <asp:GridView runat="server" CssClass="table" DataSourceID="SqlDataSourceBoatGrid" AutoGenerateColumns="False" OnRowCommand="GridViewBoats_RowCommand">
         <Columns>
+
+
             <asp:ImageField DataImageUrlField="Pictures"></asp:ImageField>
+            <asp:BoundField DataField="ID" HeaderText="Item Number"  SortExpression="ID" InsertVisible="False" ReadOnly="True"></asp:BoundField>
             <asp:BoundField DataField="Description" HeaderText="Description" SortExpression="Description"></asp:BoundField>
             <asp:BoundField DataField="Year" HeaderText="Year" SortExpression="Year"></asp:BoundField>
             <asp:BoundField DataField="Length" HeaderText="Length" SortExpression="Length"></asp:BoundField>
             <asp:BoundField DataField="Beam" HeaderText="Beam" SortExpression="Beam"></asp:BoundField>
             <asp:BoundField DataField="Draft" HeaderText="Draft" SortExpression="Draft"></asp:BoundField>
             <asp:BoundField DataField="Hull" HeaderText="Hull" SortExpression="Hull"></asp:BoundField>
-            <asp:BoundField DataField="Price" HeaderText="Price" SortExpression="Price"></asp:BoundField>
 
+            <asp:BoundField DataField="Price" DataFormatString="{0:c}" HeaderText="Price" SortExpression="Price"></asp:BoundField>
             <asp:ButtonField Text="Buy" ButtonType="Button" ></asp:ButtonField>
-
         </Columns>
     </asp:GridView>
-    <asp:SqlDataSource runat="server" ID="SqlDataSourceSailingSales" ConnectionString='<%$ ConnectionStrings:SailingSalesDBConnectionString %>' SelectCommand="SELECT * FROM [Boats]"></asp:SqlDataSource>
 
 
-<!-- Modal for contact form -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <!-- Modal for contact form -->
+    <asp:SqlDataSource runat="server" ID="SqlDataSourceBoatGrid" ConnectionString='<%$ ConnectionStrings:SailingSalesDBConnectionString %>' SelectCommand="SELECT * FROM [Boats]"></asp:SqlDataSource>
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -35,19 +36,39 @@
                     <td><label>First Name:</label></td>
                 </tr>
                 <tr>
-                    <td><asp:TextBox ID="TextBoxFirstName" runat="server"></asp:TextBox></td>
+                    <td>
+                        <asp:TextBox ID="TextBoxFirstName" runat="server"></asp:TextBox>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidatorFN" runat="server" ControlToValidate="TextBoxFirstName" ErrorMessage="Your first name is required"></asp:RequiredFieldValidator>
+                    </td>
+                    
                 </tr>
                 <tr>
                     <td><label>Last Name:</label></td>
                 </tr>
                 <tr>
-                    <td><asp:TextBox ID="TextBoxLastName" runat="server"></asp:TextBox></td>
+                    <td>
+                        <asp:TextBox ID="TextBoxLastName" runat="server"></asp:TextBox>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidatorLN" runat="server" ControlToValidate="TextBoxLastName" ErrorMessage="Your last name is required"></asp:RequiredFieldValidator>
+
+                    </td>
                 </tr>
                 <tr>
                     <td><label>Email:</label></td>
                 </tr>
                 <tr>
-                    <td><asp:TextBox ID="TextBoxEmail" runat="server"></asp:TextBox></td>
+                    <td>
+                        <asp:TextBox ID="TextBoxEmail" runat="server"></asp:TextBox>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidatorEmail" runat="server" ControlToValidate="TextBoxEmail" ErrorMessage="Your email is required"></asp:RequiredFieldValidator>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td><label>Item Number:</label></td>
+                </tr>
+                <tr>
+                    <td>
+                        <asp:TextBox ID="TextBoxItemID" runat="server"></asp:TextBox>
+                    </td>
                 </tr>
                 <tr>
                     <td><label>Message to Sales:</label></td>
@@ -61,7 +82,7 @@
         </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <asp:Button ID="ButtonSaveContactForm" CssClass="btn btn-primary" OnClick="ButtonSaveContactForm_Click" runat="server" Text="Save changes" />
       </div>
     </div>
   </div>

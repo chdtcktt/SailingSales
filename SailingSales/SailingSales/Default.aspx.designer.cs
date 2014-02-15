@@ -13,22 +13,13 @@ namespace SailingSales {
     public partial class _Default {
         
         /// <summary>
-        /// GridViewBoats control.
+        /// SqlDataSourceBoatGrid control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridViewBoats;
-        
-        /// <summary>
-        /// SqlDataSourceSailingSales control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSourceSailingSales;
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSourceBoatGrid;
         
         /// <summary>
         /// TextBoxFirstName control.
@@ -40,6 +31,15 @@ namespace SailingSales {
         protected global::System.Web.UI.WebControls.TextBox TextBoxFirstName;
         
         /// <summary>
+        /// RequiredFieldValidatorFN control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidatorFN;
+        
+        /// <summary>
         /// TextBoxLastName control.
         /// </summary>
         /// <remarks>
@@ -47,6 +47,15 @@ namespace SailingSales {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TextBoxLastName;
+        
+        /// <summary>
+        /// RequiredFieldValidatorLN control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidatorLN;
         
         /// <summary>
         /// TextBoxEmail control.
@@ -58,6 +67,24 @@ namespace SailingSales {
         protected global::System.Web.UI.WebControls.TextBox TextBoxEmail;
         
         /// <summary>
+        /// RequiredFieldValidatorEmail control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidatorEmail;
+        
+        /// <summary>
+        /// TextBoxItemID control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TextBoxItemID;
+        
+        /// <summary>
         /// TextBoxMessage control.
         /// </summary>
         /// <remarks>
@@ -65,5 +92,14 @@ namespace SailingSales {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TextBoxMessage;
+        
+        /// <summary>
+        /// ButtonSaveContactForm control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button ButtonSaveContactForm;
     }
 }
