@@ -17,6 +17,9 @@ namespace SailingSales
            
         }
 
+
+
+
         /// <summary>
         /// once the customer clicks on a button in the gridview the modal will drop down with autopopulated values of the boat chosen. The customer can then enter his info to be contacted
         /// </summary>
@@ -40,9 +43,14 @@ namespace SailingSales
                     TextBoxMessage.Text = message;
                 }
 
-                Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "$('#myModal').modal('show')", true);
+                DropModal();
 
             }
+        }
+
+        private void DropModal()
+        {
+            Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "$('#myModal').modal('show')", true);
         }
 
 
@@ -76,14 +84,7 @@ namespace SailingSales
                     db.SaveChanges();
 
                 }
-
-
-
             }
-               
-            
-
-
         }
 
 

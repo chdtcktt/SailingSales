@@ -75,6 +75,8 @@ namespace SailingSales
         {
             Context.GetOwinContext().Authentication.SignOut();
         }
+
+    
     }
 
 }

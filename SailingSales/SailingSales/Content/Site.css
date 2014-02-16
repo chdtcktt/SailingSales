@@ -1,8 +1,18 @@
 ﻿/* Move down content because we have a fixed navbar that is 50px tall */
 body {
     padding-bottom: 20px;
-    
 }
+
+h1,h2,h3,p{
+        font-family:Verdana;
+
+}
+
+.navbar {
+        border-radius: 0px;
+        margin-bottom: 0px;
+        background-color: none;
+    }
 
 /* Wrapping element */
 /* Set some basic padding to keep content from hitting the edges */
@@ -21,7 +31,7 @@ input[type="password"] {
 header {
     width: 100%;
     padding: 60px 0 30px;
-    background-color: darkblue;
+    background-color: #3276B1;
     overflow: auto;
 }
 

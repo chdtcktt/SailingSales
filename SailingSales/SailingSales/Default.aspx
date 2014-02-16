@@ -6,7 +6,7 @@
         <Columns>
 
 
-            <asp:ImageField DataImageUrlField="Pictures"></asp:ImageField>
+            <asp:ImageField DataImageUrlField="Pictures" ></asp:ImageField>
             <asp:BoundField DataField="ID" HeaderText="Item Number"  SortExpression="ID" InsertVisible="False" ReadOnly="True"></asp:BoundField>
             <asp:BoundField DataField="Description" HeaderText="Description" SortExpression="Description"></asp:BoundField>
             <asp:BoundField DataField="Year" HeaderText="Year" SortExpression="Year"></asp:BoundField>
@@ -16,7 +16,7 @@
             <asp:BoundField DataField="Hull" HeaderText="Hull" SortExpression="Hull"></asp:BoundField>
 
             <asp:BoundField DataField="Price" DataFormatString="{0:c}" HeaderText="Price" SortExpression="Price"></asp:BoundField>
-            <asp:ButtonField Text="Buy" ButtonType="Button" ></asp:ButtonField>
+            <asp:ButtonField Text="Buy" ControlStyle-CssClass="btn btn-primary" ButtonType="Button" ></asp:ButtonField>
         </Columns>
     </asp:GridView>
 
@@ -25,14 +25,31 @@
     <asp:SqlDataSource runat="server" ID="SqlDataSourceBoatGrid" ConnectionString='<%$ ConnectionStrings:SailingSalesDBConnectionString %>' SelectCommand="SELECT * FROM [Boats]"></asp:SqlDataSource>
     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-          <h4 class="modal-title" id="myModalLabel">Contact</h4>
-      </div>
-        <div class="modal-body">
-            <table>
-                <tr>
+      <div class="modal-content">
+          <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+              <h3 class="modal-title" id="myModalLabel">Contact Us</h3>
+          </div>
+          <div class="modal-body">
+
+              <h4>Address</h4>
+              <address>
+                  Sailing Sales<br />
+                  145 Ocean View W<br />
+                  Seattle, WA 98113<br />
+              </address>
+
+              <h4>Contact</h4>
+              <address>
+                  sales@sailingsales.com<br />
+                  www.sailingsales.com
+              </address>
+
+              <hr />
+
+              <h4>Send a message to sales</h4>
+              <table>
+                  <tr>
                     <td><label>First Name:</label></td>
                 </tr>
                 <tr>
@@ -63,7 +80,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td><label>Item Number:</label></td>
+                    <td><label>Item Number(Optional):</label></td>
                 </tr>
                 <tr>
                     <td>
@@ -71,7 +88,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td><label>Message to Sales:</label></td>
+                    <td><label>Message to Sales(Optional):</label></td>
                 </tr>
                 <tr>
                     <td><asp:TextBox ID="TextBoxMessage" TextMode="MultiLine" Columns="60" Rows="6"  runat="server"></asp:TextBox></td>
@@ -82,7 +99,7 @@
         </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <asp:Button ID="ButtonSaveContactForm" CssClass="btn btn-primary" OnClick="ButtonSaveContactForm_Click" runat="server" Text="Save changes" />
+        <asp:Button ID="ButtonSaveContactForm" CssClass="btn btn-primary" OnClick="ButtonSaveContactForm_Click" runat="server" Text="Send" />
       </div>
     </div>
   </div>
