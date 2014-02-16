@@ -10,13 +10,13 @@
             <asp:BoundField DataField="ID" HeaderText="Item Number"  SortExpression="ID" InsertVisible="False" ReadOnly="True"></asp:BoundField>
             <asp:BoundField DataField="Description" HeaderText="Description" SortExpression="Description"></asp:BoundField>
             <asp:BoundField DataField="Year" HeaderText="Year" SortExpression="Year"></asp:BoundField>
-            <asp:BoundField DataField="Length" HeaderText="Length" SortExpression="Length"></asp:BoundField>
-            <asp:BoundField DataField="Beam" HeaderText="Beam" SortExpression="Beam"></asp:BoundField>
-            <asp:BoundField DataField="Draft" HeaderText="Draft" SortExpression="Draft"></asp:BoundField>
+            <asp:BoundField DataField="Length" HeaderText="Length(ft)" SortExpression="Length"></asp:BoundField>
+            <asp:BoundField DataField="Beam" HeaderText="Beam(ft)" SortExpression="Beam"></asp:BoundField>
+            <asp:BoundField DataField="Draft" HeaderText="Draft(ft)" SortExpression="Draft"></asp:BoundField>
             <asp:BoundField DataField="Hull" HeaderText="Hull" SortExpression="Hull"></asp:BoundField>
 
             <asp:BoundField DataField="Price" DataFormatString="{0:c}" HeaderText="Price" SortExpression="Price"></asp:BoundField>
-            <asp:ButtonField Text="Buy" ControlStyle-CssClass="btn btn-primary" ButtonType="Button" ></asp:ButtonField>
+            <asp:ButtonField Text="Inquire" ControlStyle-CssClass="btn btn-primary" ButtonType="Button" ></asp:ButtonField>
         </Columns>
     </asp:GridView>
 
