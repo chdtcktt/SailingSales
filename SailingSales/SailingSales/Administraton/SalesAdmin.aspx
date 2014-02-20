@@ -12,7 +12,7 @@
         </Columns>
     </asp:GridView>
 
-    <asp:SqlDataSource runat="server" ID="SqlDataSourceSalesAdmin" ConnectionString='<%$ ConnectionStrings:SailingSalesDBConnectionString %>' SelectCommand="SELECT * FROM [Customers]"></asp:SqlDataSource>
+    <asp:SqlDataSource runat="server" ID="SqlDataSourceSalesAdmin" ConnectionString='<%$ ConnectionStrings:DB_9ACB28_tacketrcConnectionString %>' SelectCommand="SELECT * FROM [Customers]"></asp:SqlDataSource>
 
     <asp:Button ID="ButtonExport" runat="server" CssClass="btn btn-primary" Text="Export to .txt" OnClick="ButtonExport_Click" />
 

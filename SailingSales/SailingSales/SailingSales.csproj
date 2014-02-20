@@ -195,6 +195,7 @@
       <DependentUpon>SailingSales.edmx</DependentUpon>
       <LastGenOutput>SailingSales.cs</LastGenOutput>
     </Content>
+    <None Include="Properties\PublishProfiles\SmarterAsp.net.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Administraton\SalesAdmin.aspx" />
     <Content Include="Scripts\bootstrap.js" />
@@ -333,7 +334,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Content\data\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />

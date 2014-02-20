@@ -4,5 +4,5 @@
             <h2>Thank you for your Inquiry</h2>
             <h3>Someone from our sales department will get back to you soon!</h3>
     </header>
-    <a href="~/">Go Back</a>
+    <a href="/">Go Back</a>
 </asp:Content>

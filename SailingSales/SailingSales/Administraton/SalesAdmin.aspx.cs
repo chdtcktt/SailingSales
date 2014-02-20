@@ -26,7 +26,7 @@ namespace SailingSales
             //string fileName = "Content/data/path.txt";
             //string fullPath = Path.GetFullPath(fileName);
 
-            using (var w = new StreamWriter(Server.MapPath("~/Content/data/customerlist.txt"), true))
+            using (var w = new StreamWriter(Server.MapPath("~/exportdata/customerlist.txt"), true))
             {
                 w.WriteLine(DateTime.Now); 
 
@@ -55,7 +55,7 @@ namespace SailingSales
 
             }
 
-            Response.Redirect("~/Content/data/customerlist.txt");
+            Response.Redirect("~/exportdata/customerlist.txt");
         }
 
 

@@ -22,7 +22,7 @@
 
 
     <!-- Modal for contact form -->
-    <asp:SqlDataSource runat="server" ID="SqlDataSourceBoatGrid" ConnectionString='<%$ ConnectionStrings:SailingSalesDBConnectionString %>' SelectCommand="SELECT * FROM [Boats]"></asp:SqlDataSource>
+    <asp:SqlDataSource runat="server" ID="SqlDataSourceBoatGrid" ConnectionString='<%$ ConnectionStrings:DB_9ACB28_tacketrcConnectionString %>' SelectCommand="SELECT * FROM [Boats]"></asp:SqlDataSource>
     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
       <div class="modal-content">
@@ -80,7 +80,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td><label>Boat Intereded in:</label></td>
+                    <td><label>Boat Interested in:</label></td>
                 </tr>
                 <tr>
                     <td>
