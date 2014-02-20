@@ -14,10 +14,8 @@ namespace SailingSales
       
         protected void Page_Load(object sender, EventArgs e)
         {
-           
+            DropDownListID.Items.Insert(0, new ListItem("-- Select --", "0"));
         }
-
-
 
 
         /// <summary>
@@ -39,7 +37,7 @@ namespace SailingSales
                 foreach (var x in q)
                 {
                     string message = string.Format("Hey Sailing Sales! I would love you to contact me about the {0} {1}", x.Year, x.Description);
-                    TextBoxItemID.Text = Convert.ToString(x.ID);
+                    DropDownListID.SelectedValue = Convert.ToString(x.ID);
                     TextBoxMessage.Text = message;
                 }
 
@@ -48,10 +46,7 @@ namespace SailingSales
             }
         }
 
-        private void DropModal()
-        {
-            Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "$('#myModal').modal('show')", true);
-        }
+      
 
 
         /// <summary>
@@ -61,32 +56,52 @@ namespace SailingSales
         /// <param name="e"></param>
         protected void ButtonSaveContactForm_Click(object sender, EventArgs e)
         {
+          if(Page.IsValid)
+          {
+              using (var db = new SailingSalesDBEntities())
+              {
+                  var customer = new Customer
+                  {
+                      FirstName = TextBoxFirstName.Text,
+                      LastName = TextBoxLastName.Text,
+                      Email = TextBoxEmail.Text,
+                      Message = TextBoxMessage.Text,
+                      BoatID = Convert.ToInt32(DropDownListID.SelectedValue)
 
+                  };
 
+                  //if customer does not provide email do not save to db
+                  if (customer.Email != string.Empty)
+                  {
+                      db.Customers.Add(customer);
+                      db.SaveChanges();
 
-            using (var db = new SailingSalesDBEntities())
-            {
+                      Response.Redirect("~/thankyou");
 
-                var customer = new Customer
-                {
-                    FirstName = TextBoxFirstName.Text,
-                    LastName = TextBoxLastName.Text,
-                    Email = TextBoxEmail.Text,
-                    Message = TextBoxMessage.Text,
-                    BoatID = Convert.ToInt32(TextBoxItemID.Text)
+                  }
+              }
+          }
+          else
+          {
+              AlertMessage("Your data was not saved for some reason, please contact the site administrator");
 
-                };
+          }
+     
 
-                //if customer does not provide email do not save to db
-                if (customer.Email != string.Empty)
-                {
-                    db.Customers.Add(customer);
-                    db.SaveChanges();
-
-                }
-            }
         }
 
+
+        //utilities
+
+        private void AlertMessage(string str)
+        {
+            Page.ClientScript.RegisterStartupScript(this.GetType(), "alert", "alerts('" + str + "');", true);
+        }
+
+        private void DropModal()
+        {
+            Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "$('#myModal').modal('show')", true);
+        }
 
      
 

@@ -80,18 +80,21 @@
                     </td>
                 </tr>
                 <tr>
-                    <td><label>Item Number(Optional):</label></td>
+                    <td><label>Boat Intereded in:</label></td>
                 </tr>
                 <tr>
                     <td>
-                        <asp:TextBox ID="TextBoxItemID" runat="server"></asp:TextBox>
+                        <asp:DropDownList ID="DropDownListID" runat="server" DataSourceID="SqlDataSourceBoatGrid" DataTextField="Description" DataValueField="ID" AppendDataBoundItems="True"></asp:DropDownList>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidatorID"  ControlToValidate="DropDownListID" runat="server" InitialValue="0" ErrorMessage="You must select a boat" ></asp:RequiredFieldValidator>
                     </td>
                 </tr>
                 <tr>
-                    <td><label>Message to Sales(Optional):</label></td>
+                    <td><label>Message to Sales(optional):</label></td>
                 </tr>
                 <tr>
-                    <td><asp:TextBox ID="TextBoxMessage" TextMode="MultiLine" Columns="60" Rows="6"  runat="server"></asp:TextBox></td>
+                    <td>
+                        <asp:TextBox ID="TextBoxMessage" TextMode="MultiLine" Columns="60" Rows="6"  runat="server" ></asp:TextBox>
+                    </td>
                 </tr>   
             </table>
 

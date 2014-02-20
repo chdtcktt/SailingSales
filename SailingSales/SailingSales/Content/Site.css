@@ -9,6 +9,7 @@ h1,h2,h3,p{
 }
 td{
     font-weight:bold;
+    font-size: medium;
 }
 
 .navbar {
@@ -33,7 +34,7 @@ input[type="password"] {
 
 header {
     width: 100%;
-    padding: 60px 0 30px;
+    padding: 20px 0 30px;
     background-color: #3276B1;
     overflow: auto;
 }
